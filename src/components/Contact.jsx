@@ -1,8 +1,13 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 200 }}
+      transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       className="text-center p-6 py-20 lg:px-32 w-full overflow-hidden"
       id="contact"
     >
@@ -52,7 +57,7 @@ const Contact = () => {
           Send Message
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 
